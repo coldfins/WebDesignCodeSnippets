@@ -1,0 +1,63 @@
+// customize bootstrap
+@import 'common/variables';
+
+// sass libraries or components
+@import 'css-hamburgers/_sass/hamburgers/hamburgers';
+//@import 'selectize/dist/css/selectize';
+@import 'bootstrap/scss/bootstrap';
+@import 'font-awesome/scss/font-awesome';
+@import 'new';
+
+// mixins
+@import 'mixins/utilities';
+@import 'mixins/images';
+@import 'mixins/hover';
+@import 'mixins/cs2-mixin';
+
+// global main files
+@import 'common/global';
+@import 'common/focuspoint';
+@import 'common/comcode';
+//@import 'components/grid';
+
+// responsive font sizes
+@import 'common/rfs';
+
+// common files
+@import 'common/fonts';
+@import 'common/buttons';
+@import 'common/styles';
+@import 'common/mobile-header';
+
+// optional components
+@import 'components/overlay';
+@import 'components/flyout';
+@import 'components/sidebar';
+@import 'components/collapse';
+@import 'components/teaser';
+@import 'components/detail-page';
+@import 'components/full-page';
+@import 'components/hero';
+@import 'components/cs2';
+@import 'components/fp-example';
+
+// project components
+
+// project specific
+@import 'layout/header';
+@import 'layout/footer';
+
+
+
+// single components
+@import 'components/parallax';
+@import 'components/page-transition';
+@import 'components/home-page';
+@import 'components/contact-person';
+@import 'components/news-module';
+@import 'components/image-gallery';
+
+
+
+// styleguide
+@import 'common/styleguide';

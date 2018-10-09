@@ -1,0 +1,158 @@
+/* Scss Document */
+
+.contact_slide_content {background-color: rgba(151, 0, 59, 0.8);
+                        height: auto;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;}
+
+.contact_slide_content h6 {color: #fff;
+                           font-size: 32px;
+                           margin-bottom: 0;}
+
+.contact_2x_card_background_color {background-color: $color-gray;}
+
+.contact_2x_card h2 {font-size: 24px;
+                     margin-bottom: 16px;
+                     font-weight: 700;}
+
+.contact_2x_card_employe img {width: 100%;}
+
+.contact_2x_card h3 {font-size: 20px;
+                     font-weight: 700;}
+
+.contact_2x_card span {color: #000;
+                       font-size: 18px;
+                       font-weight: 400;}
+
+.contact_2x_card h4 {font-size: 16px;
+	                 font-weight: normal;}
+
+.contact_2x_card i {width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px solid #000;
+                    text-align: center;
+                    line-height: 30px;}
+
+.contact_3x_heading h2 {font-size: 26px;
+                        color: $color-black;
+                        font-weight: 700;}
+
+.contact_3x img {width: 100%;}
+
+.contact_3x_card {background-color: $color-white;
+                  transition: all 0.3s;
+                  position:relative;}
+
+.contact_3x_card h2 {font-size: 20px;
+                     margin-bottom: 25px;
+                     color: $color-pink;}
+
+.contact_3x_card span {font-size: 18px;
+                       font-weight: normal;
+                       color: $color-pink;}
+
+.contact_3x_card i {color: $color-pink;
+                    font-size: 25px;
+                    width: 30px;}
+
+.contact_3x_card_after {position: absolute;
+                        top: 40%;
+                        left: -30px;
+                        opacity: 0;
+                        transition: all 0.3s;}
+
+.contact_3x_card:hover {background-color: $color-pink;}
+
+.contact_3x_card:hover h2 {color: $color-white;}
+
+.contact_3x_card:hover i {color: $color-white;}
+
+.contact_3x_card:hover span {color: $color-white;}
+
+.contact_3x_card:hover .contact_3x_card_after {opacity: 1;}
+
+@media(max-width:374px){
+	
+.contact_3x_heading h2 {font-size: 22px;}
+	
+.contact_slide_content h6 {font-size: 16px;}
+	
+.contact_2x_card {padding-bottom: 20px!important;}
+	
+.contact_3x_card {padding-bottom: 20px!important;}
+	
+.contact_3x_card_after {top: -44px;
+                        left: 46%;
+	                    transform: rotate(90deg);}
+}
+
+@media(min-width:375px) and (max-width:575px){
+
+.contact_3x_heading h2 {font-size: 22px;}
+	
+.contact_slide_content h6 {font-size: 18px;}
+	
+.contact_2x_card {padding-bottom: 20px!important;}
+	
+.contact_3x_card {padding-bottom: 20px!important;}
+
+.contact_3x_card_after {top: -44px;
+                        left: 46%;
+	                    transform: rotate(90deg);}
+}
+
+@media(min-width:576px) and (max-width:767px){
+
+.contact_3x_heading h2 {font-size: 22px;}	
+
+.contact_slide_content h6 {font-size: 18px;}
+	
+.contact_2x_card {padding-bottom: 20px!important;}
+	
+.contact_3x_card {padding-bottom: 20px!important;}
+
+.contact_3x_card_after {top: -44px;
+                        left: 46%;
+	                    transform: rotate(90deg);}
+}
+
+@media(min-width:768px) and (max-width:991px){
+
+.contact_3x_heading h2 {font-size: 24px;}
+	
+.contact_slide_content h6 {font-size: 22px;}
+	
+.contact_2x_card {padding-bottom: 30px!important;}
+	
+.contact_3x_card {padding-bottom: 30px!important;}
+}
+
+@media(min-width:992px) and (max-width:1199px){
+
+.contact_3x_card h3 span {font-size: 15px;}
+	
+.contact_2x_card {padding-bottom: 30px!important;}
+	
+.contact_3x_card {padding-bottom: 30px!important;}
+}
+
+@media(min-width:1200px) and (max-width:1400px){
+	
+.contact_3x img {width: 100%;
+                 height: 100%;
+	             object-fit: cover;}
+	
+.contact_2x_card_employe img{width: 100%;
+                             height: 100%;
+                             object-fit: cover;}
+	
+.contact_3x_card span {font-size: 17px;}
+	
+.contact_2x_card {padding-bottom: 30px!important;}
+	
+.contact_3x_card {padding-bottom: 30px!important;}
+
+}
+

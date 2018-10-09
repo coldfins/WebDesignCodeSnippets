@@ -1,0 +1,15 @@
+# List of required libs and other stuff
+
+## Target Browsers
+- Firefox
+- Chrome
+- Safari
+- IE10+
+
+## Libs
+- CSS Hamburgers (https://github.com/jonsuh/hamburgers)
+- bourbon (https://github.com/thoughtbot/bourbon)
+- Font-Awesome (https://github.com/FortAwesome/Font-Awesome)
+
+## Framewroks
+- bootstrap 4 SASS (https://github.com/twbs/bootstrap)

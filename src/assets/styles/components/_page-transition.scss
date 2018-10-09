@@ -1,0 +1,114 @@
+.page-transition {
+  animation: fade-in .2s cubic-bezier(.550, .085, .680, .530) both;
+  background-color: $white;
+  color: $gray;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  vertical-align: middle;
+  visibility: visible;
+  width: 100vw;
+  z-index: 1050;
+
+  .loader {
+    animation: slide-in-left .5s cubic-bezier(.550, .085, .680, .530) .2s both;
+    display: block;
+    height: 6em;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--showContent {
+    animation: fade-out .2s cubic-bezier(.550, .085, .680, .530) .5s both;
+
+    .loader {
+      animation: slide-out-right .5s cubic-bezier(.550, .085, .680, .530) both;
+    }
+  }
+
+}
+
+
+@keyframes slide-out-right {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%);
+    visibility: visible;
+  }
+
+  99% {
+    opacity: 0;
+    transform: translateX(calc(-50% + 70px));
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(calc(-50% + 70px));
+    visibility: hidden;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(-50% - 70px));
+    visibility: hidden;
+  }
+
+  1% {
+    opacity: 0;
+    transform: translateX(calc(-50% - 70px));
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%);
+    visibility: visible;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateZ(-80px);
+    visibility: none;
+  }
+
+  1% {
+    opacity: 0;
+    transform: translateZ(-80px);
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+    visibility: visible;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateZ(0);
+    visibility: visible;
+  }
+
+  99% {
+    opacity: 0;
+    transform: translateZ(-80px);
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateZ(-80px);
+    visibility: hidden;
+  }
+}

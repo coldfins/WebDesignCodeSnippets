@@ -1,0 +1,83 @@
+.styleguide {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &.section {
+      color: $gray-light;
+    }
+
+    a {
+      font-size: .65em;
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: $brand-primary;
+        text-decoration: none;
+      }
+    }
+  }
+
+  section {
+    margin-top: 3rem;
+  }
+
+  .font {
+    .family {
+      display: block;
+
+      &::before {
+        content: '#{$font-family-base}';
+        font-size: 1.3rem;
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    .size,
+    .line-height {
+      font-size: .75rem;
+    }
+
+    .line-height {
+      display: block;
+
+      &::after {
+        @include media-breakpoint-up(sm) {
+          content: '#{$line-height-sm}';
+        }
+        @include media-breakpoint-up(lg) {
+          content: '#{$line-height-lg}';
+        }
+        content: '#{$line-height-base}';
+        font-size: .75em;
+        padding-left: .8rem;
+      }
+    }
+
+    .size {
+      display: block;
+
+      &::after {
+        @include media-breakpoint-up(sm) {
+          content: '#{$font-size-sm}';
+        }
+        @include media-breakpoint-up(lg) {
+          content: '#{$font-size-lg}';
+        }
+        content: '#{$font-size-base}';
+        font-size: .75em;
+        padding-left: .8rem;
+      }
+    }
+  }
+
+  small {
+    color: $gray-light;
+
+    & > i {
+      margin-left: -.7rem;
+    }
+  }
+}

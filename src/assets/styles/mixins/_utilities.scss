@@ -1,0 +1,14 @@
+/// These three attributes are usually used for ::before and ::after elements
+/// @param string $display block - display attribute
+/// @param string $pos absolute - position attribute
+/// @param string $content - content attribute
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+
+@mixin cubic-bezier($property, $duration, $x1, $y1, $x2, $y2) {
+  transition: $property $duration cubic-bezier($x1, $y1, $x2, $y2);
+}

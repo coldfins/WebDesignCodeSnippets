@@ -1,0 +1,49 @@
+// set-breakpoint-attr * set different values respecting breakpoints for a single css attribute
+@mixin set-breakpoint-attr($attr, $value-map) {
+  @each $bp, $v in $value-map {
+    @include media-breakpoint-up($bp) {
+      #{$attr}: $v;
+    }
+  }
+}
+
+
+// set-width  set width values respecting breakpoints
+$map-width: (
+  xs: 1,
+  sm: 2,
+  md: 3,
+  lg: 4,
+  xl: 5
+);
+
+$map-background: (
+  xs: #ccc,
+  // sm: #00f,
+  // md: #f00,
+  lg: #040,
+  xl: #d75893
+);
+
+
+@mixin set-width($map) {
+  $newmap: ();
+  @each $key, $value in $map {
+    $new-val: calc(100vw / #{$value});
+    $new-entry: ($key: $new-val);
+    $newmap: map-merge($newmap, $new-entry);
+  }
+  @include set-breakpoint-attr('width', $newmap);
+}
+
+
+.card-container {
+  > .card {
+    @include set-width($map-width);
+    &-title {
+      @include set-breakpoint-attr('color', $map-background);
+    }
+    display: inline-block;
+    transition: all ease-in-out .3s;
+  }
+}

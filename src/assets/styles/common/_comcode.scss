@@ -1,0 +1,39 @@
+.comcode {
+  background-color: $white;
+  border: solid 1px rgba(0, 0, 0, .75);
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, .25);
+  height: 500px;
+  left: 50%;
+  max-width: 1000px;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1150;
+
+  &__code {
+    background-color: $white;
+    border: 0;
+    border-radius: 5px;
+    font-family: 'Consolas';
+    font-size: .65rem;
+    height: 100%;
+    padding: 1rem;
+    width: 100%;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.comcode-backlayer {
+  background: rgba(0, 0, 0, .5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1100;
+}

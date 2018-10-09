@@ -1,0 +1,14 @@
+.image_gallery_item {overflow: hidden;
+                    padding: 0!important;}
+
+.image_gallery_box {height: 350px;
+	               overflow: hidden;}
+
+.image_gallery_box img {height: 100%;
+					    width: 100%;
+					    object-fit:cover;
+					    -o-object-fit:cover;}
+
+
+
+

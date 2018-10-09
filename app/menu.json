@@ -1,0 +1,42 @@
+{
+  "menu": [
+    {
+      "id": "menuNode_01",
+      "url": "#",
+      "text": "Menu Point 1",
+      "children": [
+        {
+          "id": "menuNode_01_01",
+          "url": "#",
+          "text": "Menu Point 1.1"
+        }, {
+          "id": "menuNode_01_02",
+          "url": "#",
+          "text": "Menu Point 1.2"
+        }
+      ]
+    }, {
+      "id": "menuNode_02",
+      "url": "#",
+      "text": "Menu Point 2"
+    }, {
+      "id": "menuNode_03",
+      "url": "#",
+      "text": "Menu Point 3",
+      "children": [
+        {
+          "id": "menuNode_03_01",
+          "url": "#",
+          "text": "Menu Point 3.1",
+          "children": [
+            {
+              "id": "menuNode_03_01_01",
+              "url": "#",
+              "text": "Menu Point 3.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

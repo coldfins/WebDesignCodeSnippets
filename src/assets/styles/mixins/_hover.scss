@@ -1,0 +1,112 @@
+@mixin hover-scale($ratio_from, $ratio_to) {
+  overflow: hidden;
+
+  img {
+    transform: scale($ratio_from);
+    transition: $transition-base;
+  }
+
+  &:hover {
+    img {
+      transform: scale($ratio_to);
+    }
+  }
+}
+
+@mixin hover-fly-up($classname) {
+  overflow: hidden;
+
+  .#{$classname} {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: $transition-base;
+  }
+
+  &:hover {
+    .#{$classname} {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@mixin hover-fly-down($classname) {
+  overflow: hidden;
+
+  .#{$classname} {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: $transition-base;
+  }
+
+  &:hover {
+    .#{$classname} {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@mixin hover-fly-in-from-left($classname) {
+  overflow: hidden;
+
+  .#{$classname}  {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: $transition-base;
+  }
+
+  &:hover {
+    .#{$classname} {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+@mixin hover-fly-in-from-right($classname) {
+  overflow: hidden;
+
+  .#{$classname} {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: $transition-base;
+  }
+
+  &:hover {
+    .#{$classname} {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+@mixin hover-inner-shade-on-img($color) {
+  &::after {
+    background: linear-gradient(to bottom, rgba($color, .5), rgba($color, 0));
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: $transition-fade;
+    width: 100%;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin hover-grow($ratio) {
+  transition: $animation-base;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    transform: scale($ratio);
+  }
+}

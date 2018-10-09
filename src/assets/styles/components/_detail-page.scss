@@ -1,0 +1,9 @@
+.card-scroll {
+  overflow: scroll;
+  width: 100vw;
+
+  .card-container {
+    overflow: hidden;
+    width: 2650px;
+  }
+}

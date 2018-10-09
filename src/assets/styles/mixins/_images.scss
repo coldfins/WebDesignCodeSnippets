@@ -1,0 +1,28 @@
+/// Scale img to specific ratio
+/// @param int $w - width value
+/// @param int $h - height value
+/// @see https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+/// @see http://engageinteractive.co.uk/blog/top-10-scss-mixins
+@mixin img-ratio($w, $h) {
+  position: relative;
+
+  &::before {
+    @include pseudo($pos: initial);
+    padding-top: ($h / $w) * 100%;
+    width: 100%;
+  }
+
+  img {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @if $h > $w {
+      height: 100%;
+    } @else {
+      width: 100%;
+    }
+  }
+}

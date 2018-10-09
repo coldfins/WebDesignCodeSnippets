@@ -1,0 +1,205 @@
+/*Main style*/
+.mobile-header {position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1073;}
+
+body.mmactive {
+  overflow: hidden;
+}
+.mobile_menu {
+  display: none;
+  position: relative;
+}
+.sm_menu_outer.active .mobile_menu {
+  display: block;
+}
+.sm_menu_outer {
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  right: 0;
+  bottom: -42px;
+  z-index: -9;
+  width: 100%;
+  opacity: 0;
+  background-color: #fff;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  padding: 12px;
+}
+.sm_menu_outer.active {
+  opacity: 1;
+  z-index: 999;
+}
+.sm_menu_outer .mobile_menu li.back a {
+  padding: 20px 5px 20px 55px;
+  background: url("../images/arrow_left.png") no-repeat scroll 15px center / 5% auto;
+  background-color: $color-pink;
+  color: #fff;
+}
+.sm_menu_outer .mobile_menu a {
+  color: $color-dark;
+  display: block;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
+}
+/*Sub Menu anim */
+.sm_menu_outer .mobile_menu .submenu {
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+  z-index: 999;
+}
+.sm_menu_outer .mobile_menu li.active>.submenu {
+  right: 0;
+}
+.sm_menu_outer .mobile_menu li {
+  list-style-type: none;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0);
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #2a2a2a 20%, #2a2a2a 50%, #2a2a2a 80%, rgba(0, 0, 0, 0) 100%) 0 0 1 0;
+  color: #000;
+}
+.sm_menu_outer .mobile_menu li.hasChild>a {
+  background: url("../images/arrow_right_black.png") no-repeat scroll 95% center / 5% auto;
+}
+/*Hamburger Animation */
+#sm_menu_ham {
+  cursor: pointer;
+  float: right;
+  height: 25px;
+  position: fixed;
+  right: 5px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  width: 30px;
+  top: 50px;
+  right: 40px;
+  z-index: 9999;
+  display: none;
+}
+#sm_menu_ham span {
+  background-color: #000;
+  border-radius: 5px;
+  display: block;
+  height: 2px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+  width: 30px;
+}
+#sm_menu_ham span:nth-child(1) {
+  top: 0;
+}
+#sm_menu_ham span:nth-child(2),
+#sm_menu_ham span:nth-child(3) {
+  top: 10px;
+}
+#sm_menu_ham span:nth-child(4) {
+  top: 20px;
+}
+#sm_menu_ham.open span:nth-child(1) {
+  left: 50%;
+  top: 18px;
+  width: 0;
+}
+#sm_menu_ham.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#sm_menu_ham.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#sm_menu_ham.open span:nth-child(4) {
+  left: 50%;
+  top: 18px;
+  width: 0;
+}
+
+@media(max-width:374px){
+
+	.mobile_header_logo img {max-width: 200px;
+	                     height: auto;}
+	
+	#sm_menu_ham {top: 50px;
+                  right: 25px;}
+	
+	.sm_menu_outer {bottom: -28px;
+                    padding: 0px;}
+	
+	#sm_menu_ham {
+  display: block;
+}
+}
+
+@media(min-width:375px) and (max-width:575px){
+	
+   .mobile_header_logo img {max-width: 220px;
+	                     height: auto;}
+	
+   #sm_menu_ham {top: 50px;
+                  right: 20px;}
+	
+	.sm_menu_outer {bottom: -28px;
+                    padding: 0px;}
+	
+	#sm_menu_ham {
+  display: block;
+}
+
+}
+
+@media(min-width:576px) and (max-width:767px){
+	
+   .mobile_header_logo img {max-width: 250px;
+	                     height: auto;}
+	
+   sm_menu_ham {top: 50px;
+                  right: 25px;}
+	
+	.sm_menu_outer {bottom: -28px;
+	                padding: 0px;}
+	
+	#sm_menu_ham {
+  display: block;
+}
+}
+
+
+@media(min-width:768px) and (max-width:991px){
+	
+.mobile_header_logo img {max-width: 250px;
+	                     height: auto;}
+	
+.sm_menu_outer {bottom: -28px;
+	                padding: 0px;}
+	
+#sm_menu_ham {
+  display: block;
+}
+}

@@ -1,0 +1,60 @@
+.teaser {
+  @include img-ratio(9, 16);
+  @include media-breakpoint-up(md) {
+    @include img-ratio(16, 9);
+  }
+
+
+  &__text {
+    background-color: rgba($gray, .75);
+    bottom: 0;
+    color: $white;
+    left: 0;
+    padding: .75rem;
+    position: absolute;
+    width: 100%;
+  }
+
+  &--neutral {
+    .teaser__text {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &--scale-up {
+    @include hover-scale(1, 1.2);
+  }
+
+  &--scale-down {
+    @include hover-scale(1.2, 1);
+  }
+
+  &--shade {
+    @include hover-inner-shade-on-img(#000);
+  }
+
+  &--shade-primary {
+    @include hover-inner-shade-on-img($brand-primary);
+  }
+
+  &--grow {
+    @include hover-grow(1.1);
+  }
+
+  &--fly-up {
+    @include hover-fly-up('teaser__text');
+  }
+
+  &--fly-down {
+    @include hover-fly-down('teaser__text');
+  }
+
+  &--fly-from-left {
+    @include hover-fly-in-from-left('teaser__text');
+  }
+
+  &--fly-from-right {
+    @include hover-fly-in-from-right('teaser__text');
+  }
+}

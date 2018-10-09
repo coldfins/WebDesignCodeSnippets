@@ -1,0 +1,16 @@
+$font-size-xs: (.85 * $font-size-base);
+
+html {
+
+  @include media-breakpoint-up(sm) {
+    font-size: $font-size-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-lg;
+  }
+  font-size: $font-size-xs;
+}

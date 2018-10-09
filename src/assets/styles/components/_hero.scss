@@ -1,0 +1,22 @@
+/*
+@styleguide
+
+@title Hero
+
+Hero element for `<div>`
+
+<div class="hero">
+  <h1>Test</h1>
+</div>
+
+    <div class="hero">
+      <h1>Test</h1>
+    </div>
+*/
+.hero {
+  height: 60vh;
+  max-height: 500px;
+  padding-left: -15px;
+  padding-right: -15px;
+  width: 100%;
+}

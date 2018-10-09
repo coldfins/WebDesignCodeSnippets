@@ -1,0 +1,38 @@
+body {
+  // background-color: $body-bg;
+  font-weight: 200;
+}
+
+.page-overlay {
+  &.fade {
+    transition: visibility $animation-base, opacity $animation-base;
+    visibility: hidden;
+
+    &.in {
+      visibility: visible;
+    }
+  }
+}
+
+
+// content wrapper
+.content-wrapper { padding: $content-wrapper-padding 0; }
+
+// disable outline on links and buttons
+a,
+button {
+  &:focus {
+    outline: none !important;
+   }
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: $font-family-base;
+}
+
+.main-container {
+  margin: 700ms;
+}
